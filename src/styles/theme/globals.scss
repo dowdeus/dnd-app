@@ -17,15 +17,9 @@ a {
   box-sizing: border-box;
 }
 
-body.dark-mode {
+body {
   color: $dark-heading;
   background: $dark-background;
-  transition: background-color 0.3s ease;
-}
-
-body.light-mode {
-  color: $light-heading;
-  background: $light-background;
   transition: background-color 0.3s ease;
 }
 
