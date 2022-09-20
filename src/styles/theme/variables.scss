@@ -1,0 +1,26 @@
+/* Light theme colours */
+$light-primary: #6d5e00;
+$light-secondary: #655e40;
+$light-tertiary: #426650;
+$light-error: #ba1a1a;
+$light-background: #fffbff;
+$light-surface: linear-gradient(0deg, rgba(208, 188, 255, 0.05), rgba(208, 188, 255, 0.05)), #fffbff;
+$light-heading:#1d1b16;
+$light-text:#32302a;
+
+/* Dark theme colours */
+$dark-primary: #dec74c;
+$dark-secondary: #d0c7a2;
+$dark-tertiary: #a8d0b4;
+$dark-error: #ffb4ab;
+$dark-background: #1d1b16;
+$dark-surface: linear-gradient(0deg, rgba(208, 188, 255, 0.05), rgba(208, 188, 255, 0.05)), #1D1B16;
+$dark-heading:#e7e2d9;
+$dark-text:#fef9ef;
+$dark-button-text: #1d1b16;
+
+/* Font Family */
+$font-heading: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$font-text: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+Bitstream Vera Sans Mono, Courier New, monospace;
