@@ -1,11 +1,8 @@
 import Link from 'next/link'
 import Head from 'next/head';
-import useDarkMode from 'use-dark-mode';
-import Toggle from '../Toggle/Toggle';
 import styles from './Heading.module.scss';
 
 function Heading() {
-  const darkMode = useDarkMode(false);
   return (
     <>
     <Head>
@@ -19,16 +16,6 @@ function Heading() {
         {' '}
         <Link href="/"><a>{'D&D Index'}</a></Link>
     </h1>
-
-    <div>
-      <button type="button" onClick={darkMode.disable}>
-        ☀
-      </button>
-      <Toggle checked={darkMode.value} onChange={darkMode.toggle} />
-      <button type="button" onClick={darkMode.enable}>
-        ☾
-      </button>
-    </div>
 
     </>
   );
