@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import Markdown from 'markdown-to-jsx';
 import { useRulesBySection } from '../../../data-access/useRules';
+import BackButton from '../../../components/BackButton/BackButton';
 import styles from '../../../styles/Rules.module.scss';
 
 const useGetRules = (index: string) => {
@@ -23,11 +24,7 @@ const BetweenAdventures = () => {
       <div className={styles.container}>
         <div className={styles.main}>
           <div className={styles.ruleGrid}>
-              <Link href="/rules">
-                  <button className={styles.backButton}>
-                          <a>{'< Back'}</a>
-                  </button>
-              </Link>
+              <BackButton href='/rules'></BackButton>
               <Markdown options={{ wrapper: Fragment }}>{ruleDesc(rule.desc)}</Markdown>
           </div>
         </div>
