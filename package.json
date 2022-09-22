@@ -10,12 +10,6 @@
     "lint:fix": "next lint --fix",
     "prepare": "husky install"
   },
-  "lint": {
-    "*.{ts,tsx}": [
-      "prettier --write",
-      "npm run lint:fix"
-    ]
-  },
   "dependencies": {
     "husky": "^8.0.1",
     "markdown-to-jsx": "^7.1.7",
