@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import { useMemo } from 'react'
 import { useTable } from 'react-table'
 import styles from './Table.module.scss';
@@ -10,12 +11,12 @@ type TableProps = {
 function Table({tableData, tableColumns}:TableProps) {
   const data = useMemo(
     () => tableData,
-    []
+    [tableData]
   )
 
   const columns = useMemo(
     () => tableColumns,
-    []
+    [tableColumns]
   )
 
   const {
@@ -30,7 +31,7 @@ function Table({tableData, tableColumns}:TableProps) {
     <table {...getTableProps()} className={styles.table}>
       <thead>
         {headerGroups.map(headerGroup => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
+          <tr { ...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map(column => (
               <th
                 {...column.getHeaderProps()}

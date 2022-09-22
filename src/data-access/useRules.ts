@@ -2,7 +2,7 @@ import useSWR from "swr";
 import { apiBase } from "../utils/const/apiBase";
 import { fetcher } from "../utils/fetcher";
 
-export function getRulesByIndex (index: string) {
+export function useRulesByIndex (index: string) {
     const { data, error } = useSWR(`${apiBase}/rules/${index}`, fetcher)
   
     return {
@@ -12,7 +12,7 @@ export function getRulesByIndex (index: string) {
     }
   }
 
-export function getRulesBySection (section: string) {
+export function useRulesBySection (section: string) {
   const { data, error } = useSWR(`${apiBase}/rule-sections/${section}`, fetcher)
   
     return {
@@ -20,4 +20,4 @@ export function getRulesBySection (section: string) {
       isLoading: !error && !data,
       isError: error
     }
-};
+}

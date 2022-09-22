@@ -1,1 +1,1 @@
-export const fetcher = (...args: any) => fetch(args).then((res) => res.json())
+export const fetcher = (args: RequestInfo | URL) => fetch(args).then((res) => res.json())

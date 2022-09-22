@@ -1,5 +1,5 @@
 {
-  "extends": ["next/core-web-vitals"],
+  "extends": ["next", "next/core-web-vitals"],
   "parser": "@typescript-eslint/parser",
   "overrides": [
     {
@@ -9,6 +9,14 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking"
       ],
+      "rules": {
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/no-unsafe-argument": "off",
+        "@typescript-eslint/no-explicit-any": "warn" // Some situations call for an explicity any, and a warning is better than an eslint-ignore comment
+      },
 
       "parserOptions": {
         "project": ["./tsconfig.json"]

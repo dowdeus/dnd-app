@@ -1,9 +1,9 @@
-import { getRulesByIndex } from '../data-access/rules';
+import { useRulesByIndex } from '../data-access/useRules';
 import styles from '../styles/Rules.module.scss';
 import CardLinkList from '../components/CardLinkList/CardLinkList';
 
-const getRules = (index: string) => {
-    const { data, isLoading, isError } = getRulesByIndex(index)
+const useGetRules = (index: string) => {
+    const { data, isLoading, isError } = useRulesByIndex(index)
   
     if (isLoading) return '..Loading'
     if (isError) return '...Error'
@@ -13,12 +13,12 @@ const getRules = (index: string) => {
 const baseUrl='rules';
 
 const Rules = () => {
-  const adventure = getRules("adventuring")
-  const appendix = getRules("appendix")
-  const combat = getRules("combat")
-  const equipment = getRules("equipment")
-  const spellcasting = getRules("spellcasting")
-  const usingAbilityScores = getRules("using-ability-scores")
+  const adventure = useGetRules("adventuring")
+  const appendix = useGetRules("appendix")
+  const combat = useGetRules("combat")
+  const equipment = useGetRules("equipment")
+  const spellcasting = useGetRules("spellcasting")
+  const usingAbilityScores = useGetRules("using-ability-scores")
 
   return (
     <div className={styles.container}>

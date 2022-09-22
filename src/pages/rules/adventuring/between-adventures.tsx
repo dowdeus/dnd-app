@@ -1,11 +1,11 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
-import { getRulesBySection } from '../../../data-access/rules';
+import { useRulesBySection } from '../../../data-access/useRules';
 import Markdown from 'markdown-to-jsx';
 import styles from '../../../styles/Rules.module.scss';
 
-const getRules = (index: string) => {
-    const { data, isLoading, isError } = getRulesBySection(index)
+const useGetRules = (index: string) => {
+    const { data, isLoading, isError } = useRulesBySection(index)
   
     if (isLoading) return '..Loading'
     if (isError) return '...Error'
@@ -13,7 +13,7 @@ const getRules = (index: string) => {
   }
 
 const BetweenAdventures = () => {
-    const rule = getRules("between-adventures");
+    const rule = useGetRules("between-adventures");
     const ruleDesc = (item: string) => {
       if (item === undefined) return '';
       return item;
