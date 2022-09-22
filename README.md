@@ -1,10 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project using the [`DND 5e API`](https://www.dnd5eapi.co/).
+This is a [Next.js](https://nextjs.org/) project using the [DND 5e API](https://www.dnd5eapi.co/).
 
 The purpose of this app is to create a UI for the DND 5e API. This project is a hobby project and has no intention for any comercial use.
 
 ## Getting Started
 
-We use [NVM](https://github.com/nvm-sh/nvm) to allow for a semless development experinace:
+We use [NVM](https://github.com/nvm-sh/nvm) to allow for a semless development experience:
 
 ```bash
 nvm use
