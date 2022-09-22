@@ -1,5 +1,4 @@
 import { Fragment } from 'react';
-import Link from 'next/link';
 import Markdown from 'markdown-to-jsx';
 import { useRulesBySection } from '../../../data-access/useRules';
 import BackButton from '../../../components/BackButton/BackButton';
