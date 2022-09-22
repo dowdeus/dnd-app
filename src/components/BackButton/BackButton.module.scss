@@ -1,0 +1,21 @@
+@import '../../styles/theme/variables.scss';
+
+.backButton {
+    background: $dark-primary;
+    color: $dark-button-text;
+    width: fit-content;
+    height: fit-content;
+    padding: .5rem 1rem;
+    border: 1px solid;
+    border-color: $dark-primary;
+    border-radius: .5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    &:hover {
+      background: $dark-secondary;
+      border-color: $dark-secondary;
+      transition: color 0.15s ease, border-color 0.15s ease;
+      
+    }
+  }
