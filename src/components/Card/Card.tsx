@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 import styles from './Card.module.scss';
 
 type CardProps = {
@@ -9,7 +9,7 @@ type CardProps = {
   subText?: string;
 };
 
-function Card({ url='/', ...props }: CardProps) {
+function Card({ url = '/', ...props }: CardProps) {
   return (
     <Link href={url}>
       <div className={styles.card}>

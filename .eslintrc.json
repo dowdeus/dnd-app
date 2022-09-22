@@ -1,5 +1,5 @@
 {
-  "extends": ["next", "next/core-web-vitals"],
+  "extends": ["next", "next/core-web-vitals", "airbnb-base"],
   "parser": "@typescript-eslint/parser",
   "overrides": [
     {
@@ -15,6 +15,14 @@
         "@typescript-eslint/no-unsafe-return": "off",
         "@typescript-eslint/restrict-template-expressions": "off",
         "@typescript-eslint/no-unsafe-argument": "off",
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "ts": "never",
+            "tsx": "never"
+          }
+       ],
         "@typescript-eslint/no-explicit-any": "warn" // Some situations call for an explicity any, and a warning is better than an eslint-ignore comment
       },
 

@@ -1,23 +1,23 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
-import { useRulesBySection } from '../../../data-access/useRules';
 import Markdown from 'markdown-to-jsx';
+import { useRulesBySection } from '../../../data-access/useRules';
 import styles from '../../../styles/Rules.module.scss';
 
 const useGetRules = (index: string) => {
-    const { data, isLoading, isError } = useRulesBySection(index)
-  
-    if (isLoading) return '..Loading'
-    if (isError) return '...Error'
-    return data;
-  }
+  const { data, isLoading, isError } = useRulesBySection(index);
+
+  if (isLoading) return '..Loading';
+  if (isError) return '...Error';
+  return data;
+};
 
 const ThePlanesOfExistence = () => {
-  const rule = useGetRules("the-planes-of-existence");
+  const rule = useGetRules('the-planes-of-existence');
   const ruleDesc = (item: string) => {
     if (item === undefined) return '';
     return item;
-  }
+  };
 
   return (
     <div className={styles.container}>
@@ -25,14 +25,14 @@ const ThePlanesOfExistence = () => {
         <div className={styles.ruleGrid}>
             <Link href="/rules">
                 <button className={styles.backButton}>
-                        <a>{`< Back`}</a>
+                        <a>{'< Back'}</a>
                 </button>
             </Link>
-            <Markdown options={{ wrapper: Fragment}}>{ruleDesc(rule.desc)}</Markdown>
+            <Markdown options={{ wrapper: Fragment }}>{ruleDesc(rule.desc)}</Markdown>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default ThePlanesOfExistence;

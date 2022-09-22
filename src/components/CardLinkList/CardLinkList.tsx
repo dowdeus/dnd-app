@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 import styles from './CardLinkList.module.scss';
 
 type CardLinkListProps = {
@@ -7,19 +7,17 @@ type CardLinkListProps = {
   list: Array<any>;
 };
 
-function CardLinkList({ baseUrl='', header, list }: CardLinkListProps) {
+function CardLinkList({ baseUrl = '', header, list }: CardLinkListProps) {
   return (
     <div className={styles.card}>
       <h2>{header}</h2>
-      {list?.map((listItem) => {
-        return (
+      {list?.map((listItem) => (
         <li key={listItem.index}>
           <Link href={`${baseUrl}/${listItem.index}`}>
             <a>{listItem.name}</a>
           </Link>
         </li>
-        )
-      })}
+      ))}
     </div>
   );
 }
