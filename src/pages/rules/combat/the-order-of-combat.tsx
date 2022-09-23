@@ -12,8 +12,8 @@ const useGetRules = (index: string) => {
   return data;
 };
 
-const ThePlanesOfExistence = () => {
-  const rule = useGetRules('the-planes-of-existence');
+const TheOrderOfCombat = () => {
+  const rule = useGetRules('the-order-of-combat');
   const ruleDesc = (item: string) => {
     if (item === undefined) return '';
     return item;
@@ -31,4 +31,4 @@ const ThePlanesOfExistence = () => {
   );
 };
 
-export default ThePlanesOfExistence;
+export default TheOrderOfCombat;

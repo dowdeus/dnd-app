@@ -1,5 +1,4 @@
 import { Fragment } from 'react';
-import Link from 'next/link';
 import Markdown from 'markdown-to-jsx';
 import { useRulesBySection } from '../../../data-access/useRules';
 import styles from '../../../styles/Rules.module.scss';
@@ -13,8 +12,8 @@ const useGetRules = (index: string) => {
   return data;
 };
 
-const Time = () => {
-  const rule = useGetRules('time');
+const MountedCombat = () => {
+  const rule = useGetRules('mounted-combat');
   const ruleDesc = (item: string) => {
     if (item === undefined) return '';
     return item;
@@ -32,4 +31,4 @@ const Time = () => {
   );
 };
 
-export default Time;
+export default MountedCombat;
