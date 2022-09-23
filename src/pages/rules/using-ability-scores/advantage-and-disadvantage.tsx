@@ -3,11 +3,12 @@ import Markdown from 'markdown-to-jsx';
 import { useRulesBySection } from '../../../data-access/useRules';
 import BackButton from '../../../components/BackButton/BackButton';
 import styles from '../../../styles/Rules.module.scss';
+import Error from '../../../components/Error/Error';
 
 const useGetRules = (index:string) => {
   const { data, isLoading, isError } = useRulesBySection(index);
   if (isLoading) return '..loading';
-  if (isError) return '..error';
+  if (isError) return <Error />;
   return data;
 };
 
