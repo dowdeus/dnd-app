@@ -3,17 +3,18 @@ import Markdown from 'markdown-to-jsx';
 import { useRulesBySection } from '../../../data-access/useRules';
 import styles from '../../../styles/Rules.module.scss';
 import BackButton from '../../../components/BackButton/BackButton';
+import Error from '../../../components/Error/Error';
 
 const useGetRules = (index: string) => {
   const { data, isLoading, isError } = useRulesBySection(index);
 
   if (isLoading) return '..Loading';
-  if (isError) return '...Error';
+  if (isError) return <Error />;
   return data;
 };
 
-const Cover = () => {
-  const rule = useGetRules('cover');
+const DamageAndHealing = () => {
+  const rule = useGetRules('damage-and-healing');
   const ruleDesc = (item: string) => {
     if (item === undefined) return '';
     return item;
@@ -31,4 +32,4 @@ const Cover = () => {
   );
 };
 
-export default Cover;
+export default DamageAndHealing;
