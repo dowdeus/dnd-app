@@ -1,0 +1,81 @@
+@import './theme/variables.scss';
+
+.container {
+  padding: 0;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+// Carousel control
+.carouselContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carouselWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 2 * 5rem);
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.carouselWrapper::-webkit-scrollbar {
+  display: hidden;
+  width: 0;
+}
+
+.shiftBtnLeft,
+.shiftBtnRight {
+  width: 5rem;
+  height: 300px;
+  padding: 0.25rem 0;
+  z-index: 10;
+  align-self: center;
+  font-size: 4rem;
+  color: $dark-primary;
+  transition: background-color 0.5s ease;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+.shiftBtnLeft:hover,
+.shiftBtnRight:hover {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.shiftBtnLeft {
+  display: block;
+  position: absolute;
+  left: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.shiftBtnRight {
+  display: block;
+  position: absolute;
+  right: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}

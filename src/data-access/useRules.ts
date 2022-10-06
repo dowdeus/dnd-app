@@ -21,3 +21,13 @@ export function useRulesBySection(section: string) {
     isError: error,
   };
 }
+
+export function useRacesByIndex(index:string) {
+  const { data, error } = useSWR(`${apiBase}/races/${index}`, fetcher);
+
+  return {
+    data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}

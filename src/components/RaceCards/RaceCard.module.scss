@@ -1,0 +1,50 @@
+@import '../../styles/theme/variables.scss';
+
+// Card slide up controls
+.cardContainer {
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 25%;
+    max-width: 375px;
+    height: 300px;
+    margin: 0.25rem;
+    background-color: black;
+    border-radius: 0.25rem;
+    .cardTitle {
+        position: relative;
+        top: 240px;
+        background-color: rgba(0, 0, 0, 0.65);
+        h2 {
+            font-size: 2rem;
+            color: inherit;
+            margin: 0;
+            padding: 0.5rem;
+            text-align: center;
+        } 
+    }
+    .cardContent {
+        height: 100%;
+        position: relative;
+        top: 240px;
+        background-color: rgba(0, 0, 0, 0.65);
+
+        h3 {
+            font-size: 1.125rem;
+            color: inherit;
+            margin: 0;
+            padding: 0.5rem 1.25rem;
+        }
+        p {
+            font-size: 1rem;
+            color: inherit;
+        }
+        li {
+            font-size: inherit;
+            color: inherit;
+            list-style-type: none;
+            line-height: 0.40;
+            padding: 0 1.25rem;
+        }
+    }
+}
