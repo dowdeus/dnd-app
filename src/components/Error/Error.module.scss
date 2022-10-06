@@ -1,0 +1,19 @@
+@import '../../styles/theme/variables.scss';
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.errorHeader,
+.errorText {
+  display: flex;
+  justify-content: center;
+}
+
+.errorImg {
+  display: flex;
+  height: auto;
+  justify-content: center;
+}
