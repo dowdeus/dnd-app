@@ -2,13 +2,14 @@ import { Fragment } from 'react';
 import Markdown from 'markdown-to-jsx';
 import { useRulesBySection } from '../../../data-access/useRules';
 import BackButton from '../../../components/BackButton/BackButton';
+import Error from '../../../components/Error/Error';
 import styles from '../../../styles/Rules.module.scss';
 
 const useGetRules = (index: string) => {
   const { data, isLoading, isError } = useRulesBySection(index);
 
   if (isLoading) return '..Loading';
-  if (isError) return '...Error';
+  if (isError) return <Error />;
   return data;
 };
 

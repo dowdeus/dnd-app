@@ -1,4 +1,5 @@
 import { useRulesByIndex } from '../data-access/useRules';
+import Error from '../components/Error/Error';
 import styles from '../styles/Rules.module.scss';
 import CardLinkList from '../components/CardLinkList/CardLinkList';
 
@@ -6,7 +7,7 @@ const useGetRules = (index: string) => {
   const { data, isLoading, isError } = useRulesByIndex(index);
 
   if (isLoading) return '..Loading';
-  if (isError) return '...Error';
+  if (isError) return <Error />;
   return data;
 };
 

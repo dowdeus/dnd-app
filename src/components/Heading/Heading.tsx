@@ -11,11 +11,19 @@ function Heading() {
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <h1 className={styles.title}>
-        Welcome to
-        {' '}
-        <Link href="/"><a>{'D&D Index'}</a></Link>
-    </h1>
+    <div className={styles.nav}>
+      <h1 className={styles.title}>
+          <Link href="/"><a>{'D&D Index'}</a></Link>
+      </h1>
+
+      <div className={styles.navContainer}>
+        <Link href="/"><a className={styles.navLink}>Home</a></Link>
+        <Link href="/rules"><a className={styles.navLink}>Rules</a></Link>
+        <Link href="/monsters"><a className={styles.navLink}>Monsters</a></Link>
+        <Link href="/spells"><a className={styles.navLink}>Spells</a></Link>
+        <Link href="/equipment"><a className={styles.navLink}>Equipment</a></Link>
+      </div>
+    </div>
 
     </>
   );
