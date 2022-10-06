@@ -89,7 +89,8 @@ function RaceCard({
                         <h3>Ability Bonuses:</h3>
                     {abilityBonuses?.map((abilityBonusesItem) => (
                         <li key={abilityBonusesItem.ability_score.index}>
-                            <p>{abilityBonusesItem.ability_score.name} = {abilityBonusesItem.bonus}</p>
+                            <p>{abilityBonusesItem.ability_score.name}
+                            = {abilityBonusesItem.bonus}</p>
                         </li>
                     ))}
                     </div>
